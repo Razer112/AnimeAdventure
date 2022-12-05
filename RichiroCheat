@@ -636,7 +636,7 @@ function sex()
         end)
 --#endregion
 --------------------------------------------------
--------------------- Auto Jual ginjal ---------------
+-------------------- Auto Gacha & Sell ---------------
 --------------------------------------------------
 --#region Auto Buy/Sell
         getgenv().UnitSellTog = false
