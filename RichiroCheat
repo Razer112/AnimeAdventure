@@ -185,7 +185,7 @@ function sex()
     local exec = tostring(identifyexecutor())
 
     local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/Forever4D/Lib/main/DiscordLib2.lua")()
-    local win = DiscordLib:Window("[😈UPD 7] Anime Adventures "..versionx.." - "..exec)
+    local win = DiscordLib:Window("[Felix Nub] Richiro Ganteng "..versionx.." - "..exec)
        
     if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" then
         print("Good boi")
@@ -213,14 +213,14 @@ function sex()
 
     if game.PlaceId == 8304191830 then
 
-        local unitselecttab = autofrmserver:Channel("👷 Select Units")
-        local slectworld = autofrmserver:Channel("🌎 Select World")
-        local autofarmtab = autofrmserver:Channel("🤖 Auto Farm")
-        local autoclngtab = autofrmserver:Channel("🎯 Auto Challenge")
+        local unitselecttab = autofrmserver:Channel("👷 Pilih Pasukan")
+        local slectworld = autofrmserver:Channel("🌎 Pilih Stages")
+        local autofarmtab = autofrmserver:Channel("🤖 Auto Ngecit :V")
+        local autoclngtab = autofrmserver:Channel("🎯 Auto Celeng")
     
 
 --------------------------------------------------
---------------- Select Units Tab -----------------
+--------------- Pilih Units Tab -----------------
 --------------------------------------------------
 --#region Select Units Tab
         local Units = {}
@@ -320,7 +320,7 @@ function sex()
                 Equip()
             end)
         end
---------------// Refresh Unit List \\------------- 
+--------------// Refresh Unit lu \\------------- 
         unitselecttab:Button("Refresh Unit List", function()
             drop:Clear()
             drop2:Clear()
@@ -360,17 +360,17 @@ function sex()
         unitselecttab:Label(" ")
 --#endregion
 --------------------------------------------------
---------------- Select World Tab -----------------
+--------------- Pilih Stages Lu -----------------
 --------------------------------------------------
 --#region Select world tab
         getgenv().levels = {"nill"}
 
-        getgenv().diff = slectworld:Dropdown("Select Difficulty", {"Normal", "Hard"}, getgenv().difficulty, function(diff)
+        getgenv().diff = slectworld:Dropdown("Pilih Kesulitan", {"Normal", "Hard"}, getgenv().difficulty, function(diff)
             getgenv().difficulty = diff
             updatejson()
         end)
 
-        local worlddrop = slectworld:Dropdown("Select World", {"Plannet Namak", "Shiganshinu District", "Snowy Town","Hidden Sand Village", "Marine's Ford",
+        local worlddrop = slectworld:Dropdown("Pilih Stages", {"Plannet Namak", "Shiganshinu District", "Snowy Town","Hidden Sand Village", "Marine's Ford",
         "Ghoul City", "Hollow World", "Ant Kingdom", "Magic Town", "Cursed Academy","Clover Kingdom", "Clover Legend - HARD","Hollow Legend - HARD"}, getgenv().world, function(world)
             getgenv().world = world
             updatejson()
@@ -482,14 +482,14 @@ function sex()
         end)
 
       
-            getgenv().leveldrop = slectworld:Dropdown("Select Level", getgenv().levels, getgenv().level, function(level)
+            getgenv().leveldrop = slectworld:Dropdown("Pilih Level", getgenv().levels, getgenv().level, function(level)
             getgenv().level = level
             updatejson()
             
         end)
 --#endregion
 --------------------------------------------------
------------------- Auto Farm Tab -----------------
+------------------ Auto Ngecit  -----------------
 --------------------------------------------------
 --#region Auto Farm Tab
         autofarmtab:Toggle("Auto Leave", getgenv().AutoLeave, function(bool)
@@ -587,14 +587,14 @@ function sex()
         end)
         
         local autoloadtab = autofrmserver:Channel("⌛ Auto Load Script")
-		autoloadtab:Label("This Automatically executes script when you teleport to man.")
-        autoloadtab:Label("You don't need to put the script in AutoExec folder!")
+		autoloadtab:Label("Untuk Cit nya langsung kebuka pas TP.")
+        autoloadtab:Label("Script punya Chiro ganteng!")
         autoloadtab:Toggle("Auto Load Script", getgenv().AutoLoadTP, function(bool)
             queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua'))()")
             getgenv().AutoLoadTP = bool
             updatejson()
         end)
-        autoloadtab:Label("⚠️ If it doesnt work properly then put the script in Autoexec\nfolder!!! ⚠️")
+        autoloadtab:Label("⚠️ Willa <3 Weston!!! ⚠️")
 
         
 
@@ -618,7 +618,7 @@ function sex()
         autofarmtab:Label(" ")
 --#endregion
 --------------------------------------------------
--------------------- Auto Challenge --------------
+-------------------- Auto Celeng --------------
 --------------------------------------------------
 --#region Auto Challenge
         autoclngtab:Toggle("Auto Challenge", getgenv().AutoChallenge, function(bool)
@@ -636,7 +636,7 @@ function sex()
         end)
 --#endregion
 --------------------------------------------------
--------------------- Auto Buy/Sell ---------------
+-------------------- Auto Jual ginjal ---------------
 --------------------------------------------------
 --#region Auto Buy/Sell
         getgenv().UnitSellTog = false
@@ -648,7 +648,7 @@ function sex()
         getgenv().autosummongeme = false
         getgenv().autosummongem10e = false
 
-        local misc = autofrmserver:Channel("💸 Auto Buy/Sell")
+        local misc = autofrmserver:Channel("💸 Auto Jual Ginjal")
 
 
         local function autobuyfunc(xx, item)
@@ -871,11 +871,11 @@ function sex()
                 end)
         end
 
-        --// Set Position \\--
+        --// Ganti Posisi \\--
         autofarmtab:Button("Set Unit 1 Postion", function()
             DiscordLib:Notification("Set Unit 1 Spawn Position",
-                "Click on the floor to set the spawn unit position!\n (don't press \"Done\" until you set position)",
-                "Done")
+                "Pencet di tanah atau lantai untuk tarok unit\n (Jangan Teken \"Selesai\" Sampe lu udah selesai set)",
+                "Selesai")
                 warn(1)
             MouseClick("UP1")
             warn(2)
@@ -938,7 +938,7 @@ function sex()
 
 --#endregion
 
---#region Auto Challenge 
+--#region Auto Celeng 
 autoclngtab:Toggle("Auto Challenge", getgenv().AutoChallenge, function(bool)
     getgenv().AutoChallenge = bool
     updatejson()
@@ -954,7 +954,7 @@ autoclngtab:Toggle("Farm All Rewards", getgenv().AutoChallengeAll, function(bool
 end)
 --#endregion
 
---#region Auto Sell Tab
+--#region Auto Jual ginjal
         autoseltab:Toggle("Auto Sell at Specfic Wave", getgenv().autosell, function(x)
             getgenv().autosell = x
             updatejson()
@@ -1461,7 +1461,7 @@ end
 
 
 
-------// Auto Farm \\------
+------// Auto Ngecit \\------
 --#region Auto Farm Loop
 coroutine.resume(coroutine.create(function()
     while task.wait(1.5) do
